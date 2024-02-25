@@ -17,12 +17,14 @@ def sum_vals(a, b):
       a + b (int)
     """
     try:
-        check_val = a + 1
-        print("first number plus one equals {}".format(check_val))
-        logging.info("SUCCESS: it looks like the values are ints or floats")
+        logging.info(a, b)
+        assert isinstance(a, int)
+        assert isinstance(b, int)
+        logging.info("SUCCESS: it looks like the values are ints")
         return a + b
     except TypeError:
-        logging.error("It appears the first value is not of type int or float")
+        logging.info(a, b)
+        logging.error("It appears the a and b are not ints")
 
 
 if __name__ == "__main__":
