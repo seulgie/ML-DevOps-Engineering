@@ -22,7 +22,7 @@ def sum_vals(a, b):
         assert isinstance(b, int)
         logging.info("SUCCESS: it looks like the values are ints")
         return a + b
-    except TypeError:
+    except AssertionError:
         logging.info(a, b)
         logging.error("It appears the a and b are not ints")
 
